@@ -1,0 +1,49 @@
+{
+    "name": "next-blog-kit",
+    "version": "1.0.0",
+    "private": false,
+    "description": "Root repository for next-blog-kit",
+    "keywords": [],
+    "author": "danpacho",
+    "license": "MIT",
+    "homepage": "https://github.com/danpacho/next-blog-api",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/danpacho/next-blog-api"
+    },
+    "scripts": {
+        "test": "vitest",
+        "test:watch": "vitest --watch -u",
+        "build": "pnpm -r --parallel --filter=./packages/** build",
+        "build:fast": "pnpm -r --parallel --filter=./packages/** build:fast",
+        "release": "pnpm build && changeset publish",
+        "reset": "pnpm -r --parallel exec rimraf node_modules && rimraf node_modules",
+        "typecheck": "tsc --noEmit --allowImportingTsExtensions --skipLibCheck",
+        "prepare": "husky install",
+        "pre-commit": "lint-staged"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.26.2",
+        "@types/node": "20.3.3",
+        "@types/react": "18.2.14",
+        "@types/react-dom": "18.2.6",
+        "@typescript-eslint/eslint-plugin": "^5.61.0",
+        "@typescript-eslint/parser": "^5.61.0",
+        "eslint": "8.44.0",
+        "eslint-config-next": "13.4.8",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-react": "7.32.2",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.3",
+        "prettier": "2.8.8",
+        "rimraf": "^5.0.1",
+        "tsup": "^7.1.0",
+        "typescript": "5.1.6",
+        "vite-tsconfig-paths": "^4.2.0",
+        "vitest": "^0.33.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
