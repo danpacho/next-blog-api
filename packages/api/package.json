@@ -1,0 +1,44 @@
+{
+    "name": "@next-blog-kit/api",
+    "version": "0.1.0",
+    "description": "Api kit for next blog",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "blog",
+        "next",
+        "api"
+    ],
+    "author": "danpacho <danpa725@cau.ac.kr>",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsup src/index.ts --format=esm,cjs --dts",
+        "build:fast": "tsup src/index.ts --format=esm,cjs"
+    },
+    "dependencies": {
+        "zod": "^3.21.4",
+        "mdx-bundler": "^9.2.1",
+        "gray-matter": "^4.0.3",
+        "remark": "^14.0.3",
+        "unified": "^10.1.2",
+        "unist-util-visit": "^5.0.0"
+    },
+    "devDependencies": {
+        "@types/mdx": "^2.0.5",
+        "@types/mdx-js__react": "^1.5.5",
+        "@types/unist": "^3.0.0"
+    },
+    "peerDependencies": {
+        "next": ">=13.4",
+        "zod": ">=3.21.4",
+        "mdx-bundler": ">=9.2.1"
+    }
+}
