@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@next-blog-kit/api':
-        specifier: workspace:^
-        version: link:packages/api
     devDependencies:
       '@changesets/cli':
         specifier: ^2.26.2
@@ -79,7 +75,7 @@ importers:
         specifier: ^9.2.1
         version: 9.2.1(esbuild@0.18.11)
       next:
-        specifier: '>=13.4'
+        specifier: '>=13.4.0'
         version: 13.4.12(react-dom@18.2.0)(react@18.2.0)
       remark:
         specifier: ^14.0.3
@@ -97,6 +93,12 @@ importers:
       '@types/unist':
         specifier: ^3.0.0
         version: 3.0.0
+
+  packages/cli:
+    dependencies:
+      '@next-blog-kit/api':
+        specifier: workspace:^
+        version: link:../api
 
 packages:
 
