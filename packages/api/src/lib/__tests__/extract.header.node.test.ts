@@ -6,7 +6,7 @@ import { extractHeaderNodes } from '../extract.header.node'
 describe('extract header nodes from markdown', () => {
     const extractor = new DataExtractor({})
     it('should extract header node in extraction range', async () => {
-        const mdData = (await extractor.readFile(`${cwd()}/packages/engine/src/lib/__mocks__/headers.md`)) as string
+        const mdData = (await extractor.readFile(`${cwd()}/packages/api/src/lib/__mocks__/headers.md`)) as string
 
         const headerNodes = extractHeaderNodes(mdData)
 

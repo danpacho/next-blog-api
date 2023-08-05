@@ -16,7 +16,7 @@ describe('blog core - meta parser', () => {
 
     it('should parse meta data from .md header data', async () => {
         const data = (await extractor.readFile(
-            `${cwd()}/packages/engine/src/core/parser/__mocks__/meta.parser.mock.md`
+            `${cwd()}/packages/api/src/core/parser/__mocks__/meta.parser.mock.md`
         )) as string
         const parsedMeta = metaParser.parseMeta({
             pureMeta: data,

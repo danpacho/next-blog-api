@@ -8,7 +8,7 @@ import { BlogPath } from '../blog.path'
 
 describe('BlogEngine - blog file parser', () => {
     const extractor = new DataExtractor({})
-    const sourcePath = `${cwd()}/packages/engine/src/core/engine/__mocks__`
+    const sourcePath = `${cwd()}/packages/api/src/core/engine/__mocks__`
     const blogFileParser = new BlogFileParser({
         blogPath: new BlogPath({
             sourcePath,

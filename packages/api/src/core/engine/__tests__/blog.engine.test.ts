@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { BlogEngine } from '../blog.engine'
 
 const blogEngine = new BlogEngine({
-    sourcePath: `${cwd()}/packages/engine/src/core/engine/__mocks__` as const,
+    sourcePath: `${cwd()}/packages/api/src/core/engine/__mocks__` as const,
     fileNameExceptions: ['profile.json'],
     urlBasePath: 'https://example.com',
     postGenerationTimeMetaName: 'update',

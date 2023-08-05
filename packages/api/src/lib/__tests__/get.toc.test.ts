@@ -6,7 +6,7 @@ import { getToc } from '../get.toc'
 describe('parse table of contents tree data in markdown', () => {
     const extractor = new DataExtractor({})
     it('should get toc', async () => {
-        const mdData = (await extractor.readFile(`${cwd()}/packages/engine/src/lib/__mocks__/headers.md`)) as string
+        const mdData = (await extractor.readFile(`${cwd()}/packages/api/src/lib/__mocks__/headers.md`)) as string
         const data = getToc(mdData, {
             max: 5,
             min: 1,
