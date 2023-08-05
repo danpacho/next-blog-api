@@ -6,10 +6,10 @@
     "keywords": [],
     "author": "danpacho",
     "license": "MIT",
-    "homepage": "https://github.com/danpacho/next-blog-api",
+    "homepage": "https://github.com/danpacho/next-blog-kit",
     "repository": {
         "type": "git",
-        "url": "https://github.com/danpacho/next-blog-api"
+        "url": "https://github.com/danpacho/next-blog-kit"
     },
     "scripts": {
         "test": "vitest",
@@ -45,5 +45,8 @@
     },
     "engines": {
         "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "@next-blog-kit/api": "workspace:^"
     }
 }

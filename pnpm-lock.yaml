@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@next-blog-kit/api':
+        specifier: workspace:^
+        version: link:packages/api
     devDependencies:
       '@changesets/cli':
         specifier: ^2.26.2
@@ -90,12 +94,6 @@ importers:
         specifier: ^3.21.4
         version: 3.21.4
     devDependencies:
-      '@types/mdx':
-        specifier: ^2.0.5
-        version: 2.0.5
-      '@types/mdx-js__react':
-        specifier: ^1.5.5
-        version: 1.5.5
       '@types/unist':
         specifier: ^3.0.0
         version: 3.0.0
@@ -882,14 +880,9 @@ packages:
       '@types/unist': 3.0.0
     dev: false
 
-  /@types/mdx-js__react@1.5.5:
-    resolution: {integrity: sha512-k8pnaP6JXVlQh18HgL5X6sYFNC/qZnzO7R2+HsmwrwUd+JnnsU0d9lyyT0RQrHg1anxDU36S98TI/fsGtmYqqg==}
-    dependencies:
-      '@types/react': 18.2.14
-    dev: true
-
   /@types/mdx@2.0.5:
     resolution: {integrity: sha512-76CqzuD6Q7LC+AtbPqrvD9AqsN0k8bsYo2bM2J8pmNldP1aIPAbzUQ7QbobyXL4eLr1wK5x8FZFe8eF/ubRuBg==}
+    dev: false
 
   /@types/minimist@1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
